@@ -1,0 +1,37 @@
+Temat:
+	„ Projekt systemu wspomagającego pracę administratora systemów”
+
+1.0 Plan (etap I ).
+				Zbieranie wymagań.
+1.1 Określenie wysokopoziomowych wymagań dla systemu. 
+ 
+a)  Cele:  Jaki jest powód budowy systemu, jekim celom ma służyć?
+System ma służyć wspomaganiu pracy administratora systemów (serwerów oraz stacji roboczych) rozproszonych po różnych krajach świata.
+Początkowe funkcjonalności:
+1. Obsługa bazy danych z hasłami (w postaci pliku .xls)
+2. Łączenie się za pomocą RDP do serwerów oraz stacji roboczych.
+3. Sprawdzanie połączenia do serwera (ping)
+4. Łączenie się do serwera poprzez protokół FTP (aplikacja Filezilla) oraz VNC (UltraVNC)
+5. Pobieranie informacji z bazy danych bez łączenia się do serwera (zakładka multiquery)
+6. Łączenie do serwera za pomocą Psexec oraz BMC.
+7. Wyświetlanie haseł z bazy danych w aplikacji, celem łatwego do nich dostępu.
+8. Możliwość aktualizacji bazy danych pobranej przez program.
+
+
+b) Przewidywane korzyści:   Jakie  korzyscie (niekoniecznie namacalne ) przyniesie działający system? 
+Zmniejszenie czasu reakcji na zgłoszenie, szybszy dostęp do stacji roboczych, większa efektywność pracy, jedno narzędzie zastępuje wiele innych. 
+
+c) Strategia i przyszłość:  Jak system może pomóc firmie w przyszłości , jaką przewgę zyskamy nad konkurencją?
+Nasi administratorzy będą mogli łączyć się do różnych i rozproszonych środowisk za pomocą kilku kliknięć, bez pamiętania o hasłach, adresach IP itp.
+d) Założenia i ograniczenia:  Jakie istnieją ograniczenia dla systemu (zasobów, organizacyjne , standardy ). Z jakimi ograniczeniami należy się liczyć przy budownie systemu.
+Ograniczenia systemowe (Microsoft) oraz ograniczenia poszczególnych komponentów. Wykorzystywane są głównie gotowe biblioteki i aplikacje.
+
+e) Bezpieczeństwo, kontrola : Czy istnieje jakieś wymaganie zewnętrzne dla systemu oraz danych.
+Hasła będą udostępniane w pliku .xls zabezpieczonym szyfrowanym hasłem oraz certyfikatem. Sama aplikacja nie wymaga nakładki bezpieczeństwa, ponieważ nie zawiera żadnych sensytywnych danych.
+
+1.2 Określenie kto będzie korzystał z systemu kluczowe. 
+
+1. Zespół supportowy – wsparcie klientów na stacjach roboczych oraz częsciowo na serwerach
+2. Administratorzy serwerów – zarządzanie serwerem
+3. Administratorzy sieci – zarządzanie połączeniami VPN.
+Każda z grup ma mieć pełnię praw do aplikacji.
